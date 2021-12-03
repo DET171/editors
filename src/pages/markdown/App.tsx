@@ -1,4 +1,3 @@
-import './App.css';
 import { Header, Form, TextArea } from 'semantic-ui-react'
 import MarkdownIt from 'markdown-it';
 import hljs from 'highlight.js';

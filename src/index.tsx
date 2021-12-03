@@ -6,7 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 
 import { Container } from 'semantic-ui-react'
 import Main from './pages/App';
-import Showdown from './pages/showdown/App';
+import Showdown from './pages/markdown/App';
 import reportWebVitals from './reportWebVitals';
 import { version } from '../package.json';
 

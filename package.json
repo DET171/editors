@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "build": "cross-env BUILD_PATH='./docs' react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,9 +42,11 @@
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",
+    "cross-env": "^7.0.3",
     "highlight.js": "^11.3.1",
     "markdown-it": "^12.2.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.4"
-  }
+  },
+  "homepage": "./"
 }
