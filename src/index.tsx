@@ -1,24 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from 'react';
+import { render } from 'react-dom';
 import './index.css';
 import 'highlight.js/styles/github.css';
 import 'semantic-ui-css/semantic.min.css'
-
 import { Container } from 'semantic-ui-react'
 import Main from './pages/App';
-import Showdown from './pages/markdown/App';
+import Markdown from './pages/markdown/App';
+import HTML from './pages/html/App';
 import reportWebVitals from './reportWebVitals';
 import { version } from '../package.json';
 
-ReactDOM.render(
-  <React.StrictMode>
+render(
+  <StrictMode>
     <Container>
       <Main />
-      <Showdown />
+      <Markdown />
+      <HTML />
       <hr />
       <p>App version { version }</p>
     </Container>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('app')
 );
 

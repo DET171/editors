@@ -40,7 +40,7 @@ class App extends Component <{}, { html: string }> {
     return (
       <>
         <Header as='h1'>Markdown</Header>
-        <Header as='h3'>Enter value : </Header>
+        <Header as='h3'>Enter value: </Header>
         <Form>
           <TextArea
           name="textValue"

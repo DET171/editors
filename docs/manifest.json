@@ -1,6 +1,6 @@
 {
-  "short_name": "Markdown Editor",
-  "name": "Markdown Editor powered by markdown-it",
+  "short_name": "Online Editors",
+  "name": "A collection of online editors",
   "icons": [
     {
       "src": "favicon.ico",
