@@ -23,13 +23,14 @@ const md = new MarkdownIt({
 class App extends Component <{}, { html: string }> {
   private result: React.RefObject<HTMLDivElement>;
 
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = { html: '' }
     this.result = React.createRef();
+    this.renderHtml = this.renderHtml.bind(this);
   }
 
-  renderHtml = (event: { target: { value: string }}): void => {
+  renderHtml(event: { target: { value: string }}): void {
     const html = md.render(event.target.value);
     this.setState({ html: html });
     if(this.result.current) this.result.current.innerHTML = html;
@@ -45,6 +46,7 @@ class App extends Component <{}, { html: string }> {
           <TextArea
           name="textValue"
           onChange={this.renderHtml}
+          style={{ minHeight: 200 }}
           ></TextArea>
         </Form>
         { !!this.state.html && 
@@ -52,7 +54,7 @@ class App extends Component <{}, { html: string }> {
           <div ref={this.result}></div>
           <Header as='h3'>Raw HTML</Header>
           <div>
-           <pre>
+            <pre>
              <code className="language-html">
                { this.state.html }
              </code>

@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container } from 'semantic-ui-react'
 import Main from './pages/App';
 import Markdown from './pages/markdown/App';
+import CSV from './pages/csv/App';
 import HTML from './pages/html/App';
 import reportWebVitals from './reportWebVitals';
 import { version } from '../package.json';
@@ -15,6 +16,9 @@ render(
     <Container>
       <Main />
       <Markdown />
+      <hr />
+      <CSV />
+      <hr />
       <HTML />
       <hr />
       <p>App version { version }</p>

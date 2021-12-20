@@ -10,11 +10,11 @@ class App extends Component {
   private onInput;
   constructor(props) {
     super(props);
-    this.onChange = this.onChange.bind(this);
+    this.HTMLonChange = this.HTMLonChange.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     const iframe: any = document.getElementById('display');
     if (iframe) {
       const display = iframe.contentDocument.body;
@@ -35,9 +35,12 @@ class App extends Component {
       </html>
       `;
     }
+    else {
+      console.log('No display IFrame found!');
+    }
   }
 
-  onChange(value: string) {
+  HTMLonChange(value: string): void {
     const iframe: any = document.getElementById('display');
     if (iframe) {
       const display = iframe.contentDocument.body;
@@ -55,7 +58,7 @@ class App extends Component {
           theme="tomorrow"
           name="editor"
           // onLoad={this.onLoad}
-          onChange={this.onChange}
+          onChange={this.HTMLonChange}
           fontSize={14}
           showPrintMargin={true}
           showGutter={true}
