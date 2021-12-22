@@ -8,6 +8,7 @@ import Main from './pages/App';
 import Markdown from './pages/markdown/App';
 import CSV from './pages/csv/App';
 import HTML from './pages/html/App';
+import TOML from './pages/toml/App';
 import reportWebVitals from './reportWebVitals';
 import { version } from '../package.json';
 
@@ -18,6 +19,8 @@ render(
       <Markdown />
       <hr />
       <CSV />
+      <hr />
+      <TOML />
       <hr />
       <HTML />
       <hr />

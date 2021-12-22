@@ -12,8 +12,8 @@ class App extends Component <{}, { JSON: any }> {
 
   // converts csv to JSON
   CSVonChange (event: { target: { value: string }}): void {
-    const csv = event.target.value;
-    const lines = csv.split("\n");
+    const csv: string = event.target.value;
+    const lines: string[] = csv.split("\n");
 
     const result: {}[] = [];
 
@@ -21,8 +21,8 @@ class App extends Component <{}, { JSON: any }> {
 
     for(let i = 1; i < lines.length; i++){
 
-      const obj = {};
-      const currentline=lines[i].split(",");
+      const obj: {} = {};
+      const currentline = lines[i].split(",", undefined);
 
       for(let j = 0; j < headers.length; j++){
           obj[headers[j]] = currentline[j];
@@ -41,7 +41,7 @@ class App extends Component <{}, { JSON: any }> {
           <TextArea placeholder='Enter CSV here' style={{ minHeight: 200 }} onChange={this.CSVonChange}></TextArea>
         </Form>
         <Header as='h3'>JSON</Header>
-        <div>{JSON.stringify(this.state.JSON)}</div>
+        <pre><code className="language-json">{JSON.stringify(this.state.JSON)}</code></pre>
       </>
     )
   }
